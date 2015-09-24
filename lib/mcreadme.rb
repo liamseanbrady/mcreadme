@@ -1,2 +1,2 @@
 require_relative './mcreadme/read_me'
-Mcreadme::ReadMe.ancestors
+require_relative './mcreadme/file_maker'
