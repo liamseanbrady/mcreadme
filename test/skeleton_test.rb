@@ -1,7 +1,5 @@
-$LOAD_PATH.unshift(File.expand_path('../../lib/', __FILE__))
-
+require_relative './test_helper'
 require 'minitest/autorun'
-require 'mcreadme/read_me'
 
 class SkeletonTest < Minitest::Test
   def test_basic_readme
