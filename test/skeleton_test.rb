@@ -5,7 +5,7 @@ class SkeletonTest < Minitest::Test
   def test_basic_readme
     file_path = '/tmp/basic_readme'
 
-    Mcreadme::ReadMe.create(file_path)
+    Mcreadme::ReadMe.create(path: file_path)
     basic_readme = File.read(file_path)
     
     refute_predicate(basic_readme, :empty?)
