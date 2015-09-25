@@ -4,4 +4,8 @@ task :test do
   end
 end
 
+task :console do
+  sh "irb -I lib -r mcreadme"
+end
+
 task :default => :test
