@@ -2,15 +2,14 @@ module Mcreadme
   class ReadMe
     attr_reader :file_maker
 
-    def self.create(path = Dir.pwd + 'README.md')
+    def self.create(path: File.expand_path('README.md', Dir.pwd), file_maker: FileMaker)
       read_me = new(path)
       content = read_me.basic
-      read_me.file_maker.make(content, path) 
+      file_maker.make(content, path) 
     end
 
-    def initialize(path, file_maker = FileMaker)
+    def initialize(path)
       @path = path
-      @file_maker = file_maker
     end
 
     def basic
